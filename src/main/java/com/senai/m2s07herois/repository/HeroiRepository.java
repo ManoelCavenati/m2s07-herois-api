@@ -1,25 +1,23 @@
 package com.senai.m2s07herois.repository;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.senai.m2s07herois.model.Heroi;
 
 @Repository
-public class HeroiRepository {
+public interface HeroiRepository extends JpaRepository<Heroi, String> {
 
-    private List<Heroi> lista = new ArrayList<>();
+} // HeroiRepository {
 
-    public void adicionar(Heroi heroi) {
+// private List<Heroi> lista = new ArrayList<>();
 
-        lista.add(heroi);
+// public void adicionar(Heroi heroi) {
 
-    }
+// lista.add(heroi);
 
-    public List<Heroi> consultar() {
-        return lista;
-    }
+// }
 
-}
+// public List<Heroi> consultar() {
+// return lista;
+// }

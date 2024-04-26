@@ -16,13 +16,13 @@ public class HeroiSevice {
 
     public Heroi inserir(Heroi heroi) {
 
-        heroiRepository.adicionar(heroi);
+        heroiRepository.save(heroi);
         return heroi;
 
     }
 
     public List<Heroi> consultar() {
-        return heroiRepository.consultar();
+        return heroiRepository.findAll();
     }
 
 }

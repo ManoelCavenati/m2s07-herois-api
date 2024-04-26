@@ -1,10 +1,25 @@
 package com.senai.m2s07herois.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "herois")
 public class Heroi {
 
+    @Id
+    @Column(length = 20, nullable = false)
     private String nome;
+
+    @Column(length = 40, nullable = false)
     private String superpoder;
+
+    @Column(nullable = true)
     private Integer idade;
+
+    @Column(length = 100, nullable = false)
     private String cidade;
 
     public String getNome() {
